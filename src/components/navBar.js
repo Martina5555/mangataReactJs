@@ -1,5 +1,7 @@
-
-     /*  <nav class=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
+import React from 'react'
+import LogoMangata from "../LogoMangata.png"
+import carritoImagen from "../carrito.png"
+    /*  <nav class=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
         <div id="div__logo">
             <a href="index.html">
             <img class="header__logo" src="./imagenes/logosSinFondo.png" alt="Logo de Mangata cosmética Natural">
@@ -69,34 +71,9 @@
             </form>
         </div>
     </nav>*/
-function Logo(){
-        return(
-    <a href="index.html">
-    <img className="header__logo" src="./LogoMangata" alt="Logo de Mangata cosmética Natural"/>
-    </a>
-        )
-}
-    
-function CarritoImg(){
-    return (
-    <div className="carritoImg">
-    <a href="index.html">
-    <img className="imgCarrito" src='./carrito.png' alt="boton carrito"/>
-    </a>
-    </div>
-    )
-        }
 
-function Buscador(){
-    return(
-    <form className="zIndex form-inline my-2 my-lg-0">
-    <input className="zIndex form-control mr-sm-2 boton__menu" type="search" placeholder="Search"
-        aria-label="Search"/>
-    <button className="btn btn-outline-success my-2 my-sm-0 boton__menu"
-        type="submit">Buscar</button>
-</form>
-    )
-}
+    
+
     function NavBar(){
         return(
             <nav className=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
@@ -142,12 +119,5 @@ function Buscador(){
         )
     }
 
-    function Titulo(){
-        return(
-        <h1 className="Titulo">Somos Mangata</h1>
-        )
-    }
 
-    function App (){
-        
-    }
+  export default NavBar;
