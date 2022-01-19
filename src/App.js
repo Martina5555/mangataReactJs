@@ -3,16 +3,18 @@ import './App.css';
 import React, { Component }  from 'react';
 import NavBar from './components/navBar';
 import Titulo from './components/titulo';
-import CarritoImg from './components/carrito';
 import Buscador from './components/buscador';
+import Greeting from './components/itemListContainer';
+import Logo from './components/logo';
 
 function App() {
   return (
     <div className="App">
-     <CarritoImg />
+     <Logo />
      <Titulo />
      <Buscador />
      <NavBar />
+     <Greeting mensaje = "consumidor consciente" />
     </div>
   );
 }
