@@ -12,3 +12,4 @@ function CarritoImg(){
         }
 
         export default CarritoImg
+        
