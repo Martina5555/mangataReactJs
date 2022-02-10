@@ -1,4 +1,4 @@
-import productos from "./components/productos"
+import productos from "./productos"
 
 const getFetch = new Promise( (res,rej)=> {
     //acciones

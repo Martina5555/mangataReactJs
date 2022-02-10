@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './item';
+import ItemDetail from './ItemDetail';
 
 
 const ItemList = ({propProd}) => {
@@ -15,6 +16,7 @@ price={producto.price}
 picture={producto.picture}
 />
     )}
+
     </div> 
   );
   };

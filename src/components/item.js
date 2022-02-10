@@ -10,7 +10,12 @@ const Item = ({id, categoria, name, description, price, picture}) => {
      <h3>{description}</h3>
      <h4>$ {price}</h4>                         
      <img src={picture}></img>
+
+     <button>Detalle 
+       <a href='./ItemDetail.js'></a>
+      </button>
   </div>
+
   )}
 
 

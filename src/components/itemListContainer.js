@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import imgProducto from "../AceiteRicino.jpeg";
 import ItemCount from "./itemCount";
 import ItemList from "./itemList";
-import getFetch  from "../getFetch"
-
+import getFetch from "../helpers/getFetch";
 function onAdd (cantidad){
 console.log (cantidad)
 }
-
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState ([])
