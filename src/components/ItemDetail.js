@@ -1,5 +1,5 @@
 import React from 'react'
-import productos from '../helpers/productos'
+
 
 const ItemDetail = ({productos}) => {
     //ejemplo de lo mismo con destructuring en item

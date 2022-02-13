@@ -1,13 +1,13 @@
 import React from 'react';
 import Item from './item';
-import ItemDetail from './ItemDetail';
+import '../estilos/style.css';
 
 
 const ItemList = ({propProd}) => {
   return (
-  <div>
+  <div className='productos'>
     {propProd.map ((producto)=>
-< Item 
+< Item
 key={producto.id}
 name={producto.name}
 categoria={producto.ategoria}

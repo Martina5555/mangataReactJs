@@ -1,6 +1,6 @@
 import productos from "./productos"
 
-const getFetch = new Promise( (res,rej)=> {
+const getFetch = () => new Promise( (res,rej)=> {
     //acciones
     let condition= true
     if (condition) {

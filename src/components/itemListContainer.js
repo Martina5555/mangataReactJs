@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import imgProducto from "../AceiteRicino.jpeg";
 import ItemCount from "./itemCount";
 import ItemList from "./itemList";
 import getFetch from "../helpers/getFetch";
-function onAdd (cantidad){
-console.log (cantidad)
-}
+import '../estilos/style.css';
+
+
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState ([])
@@ -26,13 +25,7 @@ useEffect (() => {
 
     return(
         <div>
-<a href="index.html">
-<img className=" prod1" src={imgProducto} alt="Aceite de ricino"/>
-</a>
-<button>botoncito</button>
-
- <ItemCount stock={5} initial = {1} onAdd= {onAdd} />
- { loading ? <h2>Cargando ...</h2> : 
+ { loading ? <h2 className="tituloH2">Cargando ...</h2> : 
  <ItemList propProd= {productos} />
        }
         </div> 

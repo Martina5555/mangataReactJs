@@ -1,7 +1,6 @@
-import { Button } from "bootstrap";
 import React from "react";
 import { useState } from "react";
-import ItemListContainer from "./itemListContainer";
+
 
 
 
@@ -27,10 +26,7 @@ const addToCart =()=>{
 
 return(
     <div className="container">
-    <button className="mas" onClick={handleAumentar}> + </button>
-    {contador}
-    <button className="menos"onClick={handleRestar}> - </button>
-    <button className="Addcarrito"onClick={addToCart}> Agregar al carrito </button>
+ 
     </div>
 )
 }

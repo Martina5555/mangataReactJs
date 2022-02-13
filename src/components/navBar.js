@@ -1,51 +1,44 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import CarritoImg from './carrito'
+import Logo from './logo';
+import Buscador from './buscador';
+
 
     function NavBar(){
         return(
-            <nav className=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
-       <CarritoImg />
-        <div className="collapse navbar-collapse zIndex" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-                <li className="nav-item  boton__menu dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Productos
-                    </a>
-                </li>
-                <li className="nav-item dropdown  boton__menu">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Informacion importante
-                    </a>
-                    <div className="zIndex dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item boton__menu" href="./subpaginas/TipoPielCabello.html">Tipos de piel
-                            y cabello</a>
-                        <a className="dropdown-item boton__menu" href="./subpaginas/pagEnConstruccion.html">Conservacion
-                            de los productos</a>
-                        <a className="dropdown-item boton__menu" href="./subpaginas/pagEnConstruccion.html">Quiero
-                            revender</a>
-                        <a className="dropdown-item boton__menu" href="./subpaginas/pagEnConstruccion.html">Preguntas
-                            frecuentes</a>
-                        <a className="dropdown-item boton__menu"
-                            href="./subpaginas/pagEnConstruccion.html">Ubicacion</a>
+                <nav className=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
+                <Logo />
+                <Buscador />
+                <Link to='/carrito'><CarritoImg /></Link>
+                
+                    <div className="collapse navbar-collapse zIndex" id="navbarSupportedContent">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item  boton__menu dropdown">
+                                <Link to='/productos'className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Productos
+                                </Link>
+                                <div className="zIndex dropdown-menu  boton__menu" aria-labelledby="navbarDropdown">
+                            <Link to='/productos' className="dropdown-item boton__menu" href="productos.html">Todos los
+                                produtos</Link>
+                            <Link to='/productos/:categoria' className="dropdown-item boton__menu" href="pagEnConstruccion.html">Cabello
+                                </Link>
+                            <Link to='/productos/:categoria' className="dropdown-item boton__menu" href="pagEnConstruccion.html">Skincare</Link>
+                            
+                                </div>
+                            </li>
+                            <li className="nav-item  boton__menu dropdown">
+                                <Link to='/home'className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Home
+                                </Link>
+                            </li>   
+                        </ul>
                     </div>
-                </li>
-                <li className="nav-item boton__menu">
-                    <a className="nav-link" href="./subpaginas/pagEnConstruccion.html">Sobre nosotros</a>
-                </li>
-                <li className="nav-item  boton__menu">
-                    <a className="nav-link" href="./subpaginas/contacto.html">Contactanos</a>
-                </li>
-
-            </ul>
-
-
-         
-        </div>
-    </nav>
-        )
-    }
+                </nav>
+                    )
+                }
 
 
   export default NavBar;
