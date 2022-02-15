@@ -12,7 +12,7 @@ const Item = ({id, categoria, name, description, price, picture}) => {
 
   <div>
      <h4 className='tituloH4'>{categoria}</h4>
-     <h3 className='tituloH1'>{name}</h3>
+     <h3 className='tituloH2'>{name}</h3>
      <h3 className='tituloH3'>{description}</h3>
      <h4 className='tituloH4'>$ {price}</h4>                         
      <img className='imgProductos' src={picture} alt='producto'></img>
