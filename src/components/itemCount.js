@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-
-
-
 function ItemCount({initial, stock, onAdd}) {
 const [contador, setContador] = useState(initial);
 
@@ -24,11 +21,17 @@ const addToCart =()=>{
     onAdd (contador)
 }
 
-return(
+
+ return(
     <div className="container">
- 
+    <button className="boton-verde" onClick={handleAumentar}> + </button>
+    {contador}
+    <button className="boton-verde"onClick={handleRestar}> - </button>
+    <button className="boton-verde"onClick={addToCart}> Agregar al carrito </button>
     </div>
 )
 }
+
+ 
 
 export default ItemCount

@@ -15,7 +15,9 @@ const ItemDetail = ({propProd}) => {
 <h2 className='tituloH3'> $ {propProd.price} </h2>
 <h2 className='tituloH4'> {propProd.description} </h2>
 <img className='imgProductos' src={propProd.picture}></img>
+
 <ItemCount stock={propProd.stock} initial = {1} onAdd= {onAdd} />
+
     </div>
   )
 }

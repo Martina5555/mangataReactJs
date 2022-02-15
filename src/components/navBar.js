@@ -36,12 +36,31 @@ import Buscador from './buscador';
                             </li>
                                 </ul>
                             </li>
+                            
+                            <li className="nav-item  boton__menu">
+                                <Link to='/productos/aceites'className="nav-link boton__menu" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Aceites
+                                </Link>
+                            </li>  
+                            <li className="nav-item  boton__menu">
+                                <Link to='/productos/skincare' className="nav-link boton__menu" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Skincare
+                                </Link>
+                            </li>
+                            <li className="nav-item  boton__menu">
+                                <Link to='/productos/cabello' className="nav-link boton__menu" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cabello
+                                </Link>
+                            </li>
                             <li className="nav-item  boton__menu">
                                 <Link to='/home'className="nav-link boton__menu" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Home
                                 </Link>
-                            </li>   
+                            </li> 
                         </ul>
                     </div>
                 </nav>
