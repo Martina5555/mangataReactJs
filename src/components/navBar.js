@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import CarritoImg from './carrito'
+import CarritoImg from './carritoWidget'
 import Logo from './logo';
 import Buscador from './buscador';
 
@@ -15,21 +15,29 @@ import Buscador from './buscador';
                     <div className="collapse navbar-collapse zIndex" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item  boton__menu dropdown">
-                                <Link to='/productos'className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <Link to='/productos'className="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Productos
                                 </Link>
-                                <div className="zIndex dropdown-menu  boton__menu" aria-labelledby="navbarDropdown">
-                            <Link to='/productos' className="dropdown-item boton__menu" href="productos.html">Todos los
+                                <ul className="zIndex dropdown-menu  boton__menu" aria-labelledby="navbarDropdown">
+                                    <li className='dropdown-item'>
+                            <Link to='/productos' className="dropdown-item boton__menu">Todos los
                                 produtos</Link>
-                            <Link to='/productos/:categoria' className="dropdown-item boton__menu" href="pagEnConstruccion.html">Cabello
+                                </li>
+                                <li className='dropdown-item'>
+                            <Link to='/productos/cabello' className="dropdown-item boton__menu">Cabello
                                 </Link>
-                            <Link to='/productos/:categoria' className="dropdown-item boton__menu" href="pagEnConstruccion.html">Skincare</Link>
-                            
-                                </div>
+                                </li>
+                                <li className='dropdown-item'>
+                            <Link to='/productos/skincare' className="dropdown-item boton__menu">Skincare</Link>
                             </li>
-                            <li className="nav-item  boton__menu dropdown">
-                                <Link to='/home'className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <li className='dropdown-item'>
+                            <Link to='/productos/aceites' className="dropdown-item boton__menu" >Aceites</Link>
+                            </li>
+                                </ul>
+                            </li>
+                            <li className="nav-item  boton__menu">
+                                <Link to='/home'className="nav-link boton__menu" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Home
                                 </Link>

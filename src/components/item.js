@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../estilos/style.css';
-import ItemCount from './itemCount';
+
 
 const Item = ({id, categoria, name, description, price, picture}) => {
 
-function onAdd (cantidad){
-  //hay que agregar el id de cada producto en el cLog
-  console.log (cantidad)
-  }
+
   
 //BACKSTICKS ej mas abajo
   return (
@@ -22,7 +19,7 @@ function onAdd (cantidad){
      <Link to= {`/productos/detalle/${id}`}>
      <button className='boton-verde'>Detalle </button>
      </Link>
-      <ItemCount stock={5} initial = {1} onAdd= {onAdd} />
+ 
   </div>
 
   )}

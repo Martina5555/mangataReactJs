@@ -1,5 +1,5 @@
 import React from "react";
-import LogoMangata from "../LogoMangata.png";
+import LogoMangata from "../imagenes/LogoMangata.png";
 import '../estilos/style.css';
 import { Link } from "react-router-dom";
 

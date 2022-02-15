@@ -1,12 +1,13 @@
 import React from "react";
-import carritoImagen from "../carrito.png"
+import { Link } from "react-router-dom";
+import carritoImagen from "../imagenes/carrito.png"
 
 function CarritoImg(){
     return (
     <div className="carritoImg">
-    <a href="index.html">
+    <Link to="/Carrito">
     <img className="imgCarrito" src={carritoImagen} alt="boton carrito"/>
-    </a>
+    </Link>
     </div>
     )
         }

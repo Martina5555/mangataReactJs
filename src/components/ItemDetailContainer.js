@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import getFetch from '../helpers/getFetch';
 import ItemDetail from './ItemDetail';
-import ItemCount from './itemCount';
+
 
 const ItemDetailContainer = () => {
   const [loading, setloading] = useState(true)
@@ -16,18 +16,20 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getFetch().then((data) => {
-      setProductos(data.find((item) => item.id === PId));
-    });
-  }, [PId]);
+      setProductos(data.find((item) => item.id === PId))
+      //.then(respuesta => console.log(respuesta))
+    })
+    .catch(err => console.log(err))
+    .finally(()=> setloading(false))
   
+  }, [PId]);
 
   return (
     <div>
     { loading ? <h2 className="tituloH2">Cargando ...</h2> : 
-    <ItemList propProd= {productos} /> }
+    <ItemDetail propProd= {productos} /> }
 
-    <ItemDetail productos= {productos} />
-    <ItemCount stock={5} initial = {1} onAdd= {onAdd} />
+    
     </div>
   )
 }
