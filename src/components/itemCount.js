@@ -4,7 +4,6 @@ import { useState } from "react";
 function ItemCount({initial, stock, onAdd}) {
 const [contador, setContador] = useState(initial);
 
- 
 const handleAumentar=()=>{
     if (contador < stock){
         setContador(contador + 1)
@@ -20,7 +19,6 @@ const handleRestar =()=>{
 const addToCart =()=>{
     onAdd (contador)
 }
-
 
  return(
     <div className="container">

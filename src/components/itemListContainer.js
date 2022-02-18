@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import ItemCount from "./itemCount";
 import ItemList from "./itemList";
 import getFetch from "../helpers/getFetch";
 import '../estilos/style.css';
@@ -25,7 +24,7 @@ useEffect (() => {
     //.then(respuesta => console.log(respuesta))
     .finally(()=> setloading(false))   
     //console.log('api')     
-}, [])
+}, [categoria])
 
     return(
         <div>

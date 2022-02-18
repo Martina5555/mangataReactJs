@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import CarritoImg from './carritoWidget'
 import Logo from './logo';
-import Buscador from './buscador';
+
 
 
     function NavBar(){
         return(
                 <nav className=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
                 <Logo />
-                <Buscador />
                 <Link to='/carrito'><CarritoImg /></Link>
                 
                     <div className="collapse navbar-collapse zIndex" id="navbarSupportedContent">
