@@ -5,7 +5,7 @@ const BotonFinalizarCompra = () => {
   return (
     <div>
         <Link to={'/carrito}'}>
-            <button id="botonAddyComprar" className="boton-verde" onClick={}>Finalizar compra</button>
+            <button id="botonAddyComprar" className="boton-verde" >Finalizar compra</button>
         </Link>  
     </div>
   )

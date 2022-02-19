@@ -20,7 +20,7 @@ const ItemDetail = ({propProd}) => {
 <h2 className='tituloH3'> $ {propProd.price} </h2>
 <h2 className='tituloH4'> {propProd.description} </h2>
 <img className='imgProductos' src={propProd.picture}></img>
-{saveAdd === 0 ? <ItemCount initial = {1} onAdd= {onAdd} stock={productos.stock}/> : <BotonFinalizarCompra/>}
+{saveAdd === 0 ? <ItemCount initial = {1} onAdd= {onAdd} stock={propProd.stock}/> : <BotonFinalizarCompra/>}
 
     </div>
   )
