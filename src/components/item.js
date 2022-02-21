@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/CartContext';
 import '../estilos/style.css';
 
 
 const Item = ({id, categoria, name, description, price, picture}) => {
-
+const {agregar} = useCartContext(); /*useCartContext evuelve un objeto que devuelve productillo y cantidad*/
 
   
 //BACKSTICKS ej mas abajo
