@@ -2,16 +2,16 @@ import React from 'react'
 import { useCartContext } from "../context/CartContext";
 
 function Cart() {
-  const { estadoCartContext, eliminarUno, borraTodos } = useCartContext();
+  const { estadoCartContext, quitar1, vaciarCart } = useCartContext();
   return (
     <div>
       <h1>No hay items seleccionados</h1>
-	  <button onClick={borraTodos}>borrarTodo</button>
+	  <button onClick={vaciarCart}>borrarTodo</button>
       {estadoCartContext.map((productin) => (
-        <div key={productin.id}>
-          <h2>{productin.nombre}</h2>
-          <p>{productin.quantity}</p>
-          <button onClick={() => eliminarUno(productin.nombre)}>X</button>
+        <div key={productin.data.id}>
+          <h2>{productin.data.name}</h2>
+          <h2>{productin.cantidad} x ${productin.data.price}</h2>
+          <button onClick={() => quitar1(productin.data.id)}>X</button>
         </div>
       ))}
     </div>
