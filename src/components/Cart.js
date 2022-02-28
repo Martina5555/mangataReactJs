@@ -7,20 +7,25 @@ function Cart() {
   return (
     (estadoCartContext.length===0
     ?<>
-    <h1>No hay items seleccionados</h1>  
+    <h1 className='tituloH2'>No hay items seleccionados</h1>  
     <Link to= "/productos" >
     <button className='boton-verde'>Buscar productos</button>
     </Link>
     </>
     :<div>
-      <button onClick={vaciarCart}>borrarTodo</button>
         {estadoCartContext.map((productin) => (
           <div key={productin.data.id}>
-            <h2>{productin.data.name}</h2>
-            <h2>{productin.cantidad} x ${productin.data.price}</h2>
-            <button onClick={() => quitar1(productin.data.id)}>X</button>
+            <h2 className='tituloH2'>{productin.data.name}</h2>
+            <h2 className='tituloH3'>{productin.cantidad} x ${productin.data.price}</h2>
+            <img className='imgProductos' src={productin.data.picture} alt="fotin" />
+            <button className='boton-verde' onClick={() => quitar1(productin.data.id)}>X</button>
+            
             <div>
-             <h3 className='TituloH3'>{`Total: $${totalCart()} ${cantidadItems()}items en tu Carrito`}</h3> 
+             <h3 className='tituloH4'>{`Total: $${totalCart()}. Hay ${cantidadItems()} items en tu Carrito`}</h3> 
+             <button className='boton-verde' onClick={vaciarCart}>Vaciar Carrito</button>
+             <Link to={"/finalizado"}>
+             <button className='boton-verde'>Comprar</button>
+             </Link>
             </div>
           </div>
         ))}

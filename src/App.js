@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import {CartContextProvider} from './context/CartContext';
+import CompraFinalizada from './components/CompraFinalizada';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/productos/:categoria' element={<ItemListContainer/>}/>     
         <Route exact path='/productos/detalle/:PId' element={<ItemDetailContainer/>}/>    
         <Route exact path='/carrito' element={<Cart/>}/> 
+        <Route exact path='/finalizado' element={<CompraFinalizada/>}/>
         </Routes>
       </div>
     </BrowserRouter>
