@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import CarritoImg from './carritoWidget'
+import CarritoWidget from './carritoWidget';
 import Logo from './logo';
 
 
@@ -9,7 +9,7 @@ import Logo from './logo';
         return(
                 <nav className=" zIndex navbar navbar-expand-lg navbar-light header__fondo">
                 <Logo />
-                <Link to='/carrito'><CarritoImg /></Link>
+                <Link to='/carrito'><CarritoWidget /></Link>
                 
                     <div className="collapse navbar-collapse zIndex" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">

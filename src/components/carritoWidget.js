@@ -1,12 +1,19 @@
 import React from "react";
 import carritoImagen from "../imagenes/carrito.png";
+import { useCartContext } from "../context/CartContext";
 
-function CarritoImg() {
+function CarritoWidget() {
+	const { estadoCartContext, cantidadItems } = useCartContext();
 	return (
-		<div className="carritoImg">
+			(estadoCartContext.length===0
+			? <div className="carritoImg">
+			<p> {cantidadItems} </p>
 			<img className="imgCarrito" src={carritoImagen} alt="boton carrito" />
-		</div>
-	);
+			</div>
+			:<div>
+			<img className="imgCarrito" src={carritoImagen} alt="boton carrito" />)
+			</div>)
+			);
 }
 
-export default CarritoImg;
+export default CarritoWidget;
