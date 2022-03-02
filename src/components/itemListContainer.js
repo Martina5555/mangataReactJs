@@ -1,35 +1,33 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ItemList from "./itemList";
-import getFetch from "../helpers/getFetch";
 import '../estilos/style.css';
-import { useParams } from "react-router-dom";
-
+//import { useParams } from "react-router-dom";
+import { collection, docs, getDocs, getFirestore } from 'firebase/firestore';
 
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState ([])
-    const {categoria} = useParams();
+   // const {categoria} = useParams();
 
     const [loading, setloading] = useState(true)
 
+    //Anterior getFetch. Llamada a api
 useEffect (() => {
-    // porque la llamada a api es pesada. Asincronico
-    getFetch()
-    //simulacion de llamado de api
-    //ternario filtro
-    .then(res => 
-        setProductos(categoria ? res.filter ((productos) => productos.categoria === categoria) : res))
-    .catch(err => console.log(err))
-    //.then(respuesta => console.log(respuesta))
-    .finally(()=> setloading(false))   
-    //console.log('api')     
-}, [categoria])
+
+   const db = getFirestore()
+
+   const productosCollection = collection (db, 'HelperProductos')
+   getDocs (productosCollection)
+   .then(respuesta => setProductos (respuesta.docs.map(prod =>({id: prod.id, ...prod.data()}))))
+   .catch(err => console.log(err))
+   .finally(()=> setloading(false))
+}, [])
 
     return(
         <div>
  { loading ? <h2 className="tituloH2">Cargando ...</h2> : 
- <ItemList propProd= {productos} /> 
+ <ItemList productosCollection= {productos} /> 
        }
         </div> 
     )}

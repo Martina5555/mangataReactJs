@@ -5,15 +5,13 @@ import { useCartContext } from "../context/CartContext";
 function CarritoWidget() {
 	const { estadoCartContext, cantidadItems } = useCartContext();
 	return (
-		<>	{estadoCartContext.length===0
-			? <div className="carritoImg">
+		<>	<div className="carritoImg">
 			<img className="imgCarrito" src={carritoImagen} alt="boton carrito" />
-			</div>
-			:<div>
-			<img className="imgCarrito" src={carritoImagen} alt="boton carrito" />
-			<p> Hay {cantidadItems()} productos en el Carrito </p>
-			</div>}
-			</>)
+			{estadoCartContext.length > 0 && (
+				<p> Hay {cantidadItems()} productos en el Carrito </p>
+			)}
+		</div>
+		</>)
 			
 }
 

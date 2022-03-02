@@ -2,19 +2,19 @@ import React from 'react';
 import Item from './item';
 import '../estilos/style.css';
 
-//le pasa props a item
-const ItemList = ({propProd}) => {
+//le pasa props a item desde firebase y ya no desde propProd (helpers productos)
+const ItemList = ({productosCollection}) => {
   return (
   <div className='productos'>
-    {propProd.map ((producto)=>
+    {productosCollection.map ((producto)=>
 < Item
 key={producto.id}
 id={producto.id}
 name={producto.name}
-categoria={producto.ategoria}
+categoria={producto.category}
 description={producto.description}
 price={producto.price}
-picture={producto.picture}
+picture={producto.imgUrl}
 />
     )}
 

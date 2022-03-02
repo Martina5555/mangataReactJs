@@ -40,11 +40,11 @@ export const CartContextProvider = ({ children }) => {
 	const vaciarCart = () => setEstadoCartContext([]);
 
 	const totalCart = () => {
-		//el 0 le indica a acumulacion el valor de arranque. La funcion .reduce devuelve numero
-		return estadoCartContext.reduce((acumulacion, productete)=> acumulacion =+ (productete.data.price * productete.cantidad) ,0)
+		//el 0 le indica a acumulacion el valor de arranque. La funcion .reduce devuelve numero. 
+		return estadoCartContext.reduce((acumulacion, productete)=> acumulacion + (productete.data.price * productete.cantidad) ,0)
 	}
 	const cantidadItems = () => {
-		return estadoCartContext.reduce((acumulacion, productete)=> acumulacion =+ productete.cantidad ,0)
+		return estadoCartContext.reduce((acumulacion, productete)=> acumulacion + productete.cantidad ,0)
 	}
 	return (
 		/*Antes habia generado un loop infinito poniendo CartContextProvider sin el 

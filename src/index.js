@@ -5,7 +5,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './gridFlexBox.css';
+import getfirestoreApp from './firebase/configuracion';
 
+getfirestoreApp()
 
 ReactDOM.render(
   <React.StrictMode>

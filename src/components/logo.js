@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Logo(){
     return(
-<Link to='/home'>
+<Link to='/'>
 <img className="header__logo" src={LogoMangata} alt="Logo de Mangata cosmética Natural"/>
 </Link>
     )
