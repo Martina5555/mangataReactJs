@@ -9,9 +9,9 @@ const ItemDetailContainer = () => {
 
 	//anterior getFetch con use params y pId
 	useEffect(() => {
-		const db = getFirestore()
+		const conexion = getFirestore()
 
-		const productoItem = doc (db, 'HelperProductos', PId)//esta mal el id
+		const productoItem = doc (conexion, 'HelperProductos', PId)
 		getDoc (productoItem)
 		.then(respuesta => setProducto({id: respuesta.id, ...respuesta.data()}))
 		.catch(err => console.log(err))

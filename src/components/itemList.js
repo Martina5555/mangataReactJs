@@ -11,10 +11,10 @@ const ItemList = ({productosCollection}) => {
 key={producto.id}
 id={producto.id}
 name={producto.name}
-categoria={producto.category}
+category={producto.category}
 description={producto.description}
 price={producto.price}
-picture={producto.imgUrl}
+imgUrl={producto.imgUrl}
 />
     )}
 

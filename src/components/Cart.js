@@ -17,7 +17,7 @@ function Cart() {
           <div key={productin.data.id}>
             <h2 className='tituloH2'>{productin.data.name}</h2>
             <h2 className='tituloH3'>{productin.cantidad} x ${productin.data.price}</h2>
-            <img className='imgProductos' src={productin.data.picture} alt="fotin" />
+            <img className='imgProductos' src={productin.data.imgUrl} alt="fotin" />
             <button className='boton-verde' onClick={() => quitar1(productin.data.id)}>X</button>
             
             <div>

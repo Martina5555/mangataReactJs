@@ -20,10 +20,10 @@ const ItemDetail = ({ propProd }) => {
 		<div>
 			<div>
 				<h1 className="tituloH2"> {propProd.name} </h1>
-				<h4 className="tituloH4"> {propProd.categoria} </h4>
+				<h4 className="tituloH4"> {propProd.category} </h4>
 				<h2 className="tituloH3"> $ {propProd.price} </h2>
 				<h2 className="tituloH4"> {propProd.description} </h2>
-				<img className="imgProductos" alt={propProd.name} src={propProd.picture}/>
+				<img className="imgProductos" alt={propProd.name} src={propProd.imgUrl}/>
 			</div>
 			<div>
 				{saveAdd === 0 ? (
