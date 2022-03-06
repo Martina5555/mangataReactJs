@@ -1,9 +1,7 @@
-import React from "react"
+import React from 'react';
 
-function Titulo(){
-    return(
-    <h1 className="Titulo">Somos Mangata</h1>
-    )
+function Titulo() {
+    return <h1 className="Titulo">Somos Mangata</h1>;
 }
 
-export default Titulo
+export default Titulo;

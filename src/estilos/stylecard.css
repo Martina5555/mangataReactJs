@@ -1,8 +1,7 @@
-
 .card-body {
-    border: 1px solid #000 ;
+    border: 1px solid #000;
     border-radius: 1px;
-    background-color: #F0F8D8;
+    background-color: #f0f8d8;
     width: 100%;
 }
 
@@ -20,78 +19,74 @@
     margin: auto;
 }
 
-
 /* CLASES DE RESEÑAS*/
 .card-17 {
     margin-bottom: 10px;
-  
 }
 
 /* ClASE PAG CONSTRUCCION IMG */
-.img__construccion{
+.img__construccion {
     overflow: hidden;
     max-width: 100%;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     max-width: 100%;
+}
 
-  }
-
-  .bg {
-    background-image: url(../imagenes/Untitled\ \(1\).svg);
+.bg {
+    background-image: url(../imagenes/Untitled\\(1\).svg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-/*     background-size: cover; */
-  }
-   
-.posicion__H1{
+    /*     background-size: cover; */
+}
+
+.posicion__H1 {
     position: relative;
     top: 70px;
     font-size: 25px;
-    border: #CCEEF2 solid 5px;
+    border: #cceef2 solid 5px;
     max-width: 80%;
     padding: 5px;
     background-color: rgba(255, 0, 0, 0.753);
 }
 
-
-  .boton__menu{
+.boton__menu {
     padding: 5px;
     color: black;
     font-family: quicksand;
     text-decoration: none;
     font-size: 17.5px;
-  }
-
-  .btn-outline-success{
-      border: solid lightgrey 1px;
-  }
-  .btn-outline-success:hover {
-    color: black;
-    background-color: #D0EA7E;
-    border-color: #D0EA7E; 
 }
 
-  .navbar-light .navbar-nav .nav-link{
-      color: black;
-      font-weight: 500;
-  }
+.btn-outline-success {
+    border: solid lightgrey 1px;
+}
+.btn-outline-success:hover {
+    color: black;
+    background-color: #d0ea7e;
+    border-color: #d0ea7e;
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+}
 
-  .carousel-caption{
-      background-color: #cceef2dc;
-      color: black;
-  }
+.carousel-caption {
+    background-color: #cceef2dc;
+    color: black;
+}
 
-  .limit{
-      overflow: hidden;
-      max-width: 98%;
-  }
+.limit {
+    overflow: hidden;
+    max-width: 98%;
+}
 
-  .bootstrapResenas{
+.bootstrapResenas {
     display: flex;
     flex-wrap: wrap;
 }

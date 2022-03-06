@@ -1,12 +1,12 @@
-import React from 'react'
-import formularioCompra from '../firebase/LogicaOrderYStock'
+import React from 'react';
+import LogicaOrderYStock from '../firebase/LogicaOrderYStock';
 
 const CompraFinalizada = () => {
-  return (
-    <div className='main'>
-      {formularioCompra}
-    </div>
-  )
-}
+    return (
+        <div className="main">
+            <LogicaOrderYStock />
+        </div>
+    );
+};
 
-export default CompraFinalizada
+export default CompraFinalizada;
