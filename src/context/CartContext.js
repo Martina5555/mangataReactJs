@@ -46,6 +46,9 @@ export const CartContextProvider = ({ children }) => {
 	const cantidadItems = () => {
 		return estadoCartContext.reduce((acumulacion, productete)=> acumulacion + productete.cantidad ,0)
 	}
+	 //guardar Cart en memoria
+	localStorage.setItem("CartStorage", estadoCartContext);
+	
 	return (
 		/*Antes habia generado un loop infinito poniendo CartContextProvider sin el 
 . porque llamaba a la funcion del mismo componente y no a la accion .Provider: */

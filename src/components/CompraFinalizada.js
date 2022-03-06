@@ -1,11 +1,10 @@
 import React from 'react'
+import formularioCompra from '../firebase/LogicaOrderYStock'
 
 const CompraFinalizada = () => {
   return (
     <div className='main'>
-        <h1 className='tituloH2'>
-            Felicitaciones! Tu compra se realizó con éxito.
-        </h1>
+      {formularioCompra}
     </div>
   )
 }

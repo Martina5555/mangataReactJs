@@ -13,23 +13,31 @@ const ItemListContainer = () => {
 
     const [loading, setloading] = useState(true)
     //Anterior getFetch. Llamada a api
-useEffect (() => {
+useEffect (([categoria]) => {
 
    const conexion = getFirestore()
    const productosCollection = collection (conexion, 'HelperProductos')
-   //este categoria es de useParams
-   const productosFiltro = query(productosCollection, where ('category', '==', categoria), categoria)
-
+   //este categoria es de useParams con ternario
+   const productosFiltro = categoria
+    ? query(productosCollection, where ('category', '==', categoria))
+    : productosCollection;
+   
    getDocs (productosFiltro)
-   .then(respuesta => setProductos (respuesta.docs.map(prod =>({id: prod.id, ...prod.data()}))))
-   .catch(err => console.log(err))
-   .finally(()=> setloading(false))
-}, [])
+   .then((respuesta) => setProductos (respuesta.docs.map((prod) =>({id: prod.id, ...prod.data() }))
+   )
+)
+   .catch((err) => console.log(err))
+   .finally(()=> setloading(false));
+}, [categoria])
+
 
     return(
         <div>
  { loading ? <h2 className="tituloH2">Cargando ...</h2> : 
- <ItemList productosCollection= {productos} /> 
+ <>
+  <ItemList productosCollection= {productos} /> 
+ </>
+
        }
         </div> 
     )}
