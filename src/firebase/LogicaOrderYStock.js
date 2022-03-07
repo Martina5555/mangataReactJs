@@ -100,7 +100,7 @@ const LogicaOrderYStock = () => {
 
   return (
     <form onSubmit={crearOrden}>
-      <input
+      <input className="boton-verde"
         type="text"
         name="name"
         placeholder="Nombre y Apellido"
@@ -108,7 +108,7 @@ const LogicaOrderYStock = () => {
         value={dataForm.name}
       />
       <br />
-      <input
+      <input className="boton-verde"
         type="number"
         name="phone"
         placeholder="Número de teléfono"
@@ -116,14 +116,15 @@ const LogicaOrderYStock = () => {
         value={dataForm.phone}
       />
       <br />
-      <input
+      <input className="boton-verde"
         type="email"
         name="email"
         placeholder="email"
         onChange={handleChange}
         value={dataForm.email}
       />
-      <input
+        <br />
+      <input className="boton-verde"
         type="email"
         name="validarEmail"
         placeholder="Repetir Email"
