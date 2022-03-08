@@ -1,6 +1,5 @@
 import React from "react";
 import Item from "./item";
-import "../estilos/style.css";
 
 //le pasa props a item desde firebase y ya no desde propProd (helpers productos)
 const ItemList = ({ productosCollection }) => {

@@ -8,7 +8,7 @@ import Cart from "./components/Cart";
 import Home from "./components/Home";
 import { CartContextProvider } from "./context/CartContext";
 import CompraFinalizada from "./components/CompraFinalizada";
-import LogicaOrderYStock from "./firebase/LogicaOrderYStock";
+
 
 function App() {
   return (

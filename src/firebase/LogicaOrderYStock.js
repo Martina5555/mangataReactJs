@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 const LogicaOrderYStock = () => {
   //Order creation
   const navigate = useNavigate();
-  const { estadoCartContext, sumaTotal, vaciarCart } = useCartContext();
+  const { estadoCartContext, vaciarCart } = useCartContext();
   const conexion = getFirestore();
   const [id, setId] = useState("");
   const [dataForm, setDataForm] = useState({
@@ -45,8 +45,7 @@ const LogicaOrderYStock = () => {
         amount,
       };
     });
-    //esa llavecita que esta abajo estaba acá y el error era que await no estaba definido
-    //porque quedaba separado del componente con async
+    
 
     //(creacion de collection nueva)
     const ordersCollection = collection(conexion, "Orders");
@@ -88,8 +87,7 @@ const LogicaOrderYStock = () => {
         vaciarCart();
       });
     batch.commit();
-  }; //esta llavecita estaba más arriba y acá deja de salir el error de await pero me saleque todo es undefined practicamente
-  //que con la llave arriba no pasaba
+  }; 
 
   const handleChange = (event) => {
     setDataForm({
@@ -99,6 +97,9 @@ const LogicaOrderYStock = () => {
   };
 
   return (
+    <div>
+          {id !== '' && alert(`El id de la orden es : ${id} `) }
+
     <form onSubmit={crearOrden}>
       <input className="boton-verde"
         type="text"
@@ -138,6 +139,7 @@ const LogicaOrderYStock = () => {
         Confirmar compra
       </button>
     </form>
+    </div>
   );
 };
 

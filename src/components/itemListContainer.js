@@ -5,7 +5,6 @@ import "../estilos/style.css";
 import { useParams } from "react-router-dom";
 import {
   collection,
-  docs,
   getDocs,
   getFirestore,
   query,

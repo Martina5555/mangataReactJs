@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../estilos/style.css";
+
 
 //ahora vienen props desde prod en ItemListCOntainer y no desde propProd
 const Item = ({ id, category, name, description, price, imgUrl }) => {

@@ -4,7 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./gridFlexBox.css";
+import "./estilos/gridFlexBox.css";
+import "./estilos/style.css";
+import "./estilos/reset.css";
 import getfirestoreApp from "./firebase/configuracion";
 
 getfirestoreApp();

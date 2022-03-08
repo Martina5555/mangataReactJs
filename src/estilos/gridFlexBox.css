@@ -1,44 +1,3 @@
-/* FLEX FOOTER */
-.botonRedes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.botonFb {
-  display: flex;
-  height: 33px;
-  width: auto;
-  margin: 5px 10px 5px 5px;
-}
-
-.botonFb:hover {
-  transform: scale(0.95);
-  transition: 0.2s;
-}
-
-.botonIg {
-  display: flex;
-  height: 32px;
-  width: auto;
-  margin: 5px 10px 5px 5px;
-}
-.botonIg:hover {
-  transform: scale(0.95);
-  transition: 0.2s;
-}
-.form__flex {
-  display: flex;
-  flex: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  margin: auto;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 /* GRID PRODUCTOS */
 
@@ -173,12 +132,3 @@
   grid-area: prod16;
 }
 
-.intro__elementos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 540px;
-  background-color: #cceef2;
-  justify-content: space-around;
-  align-items: center;
-}
